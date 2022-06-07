@@ -37,7 +37,7 @@ describe('index route', () => {
     return request(app)
       .get(base_path+'?tags=california123&tagmode=all')
       .expect('Content-Type', /html/)
-      .expect(301)
+      .expect(200)
       .then(response => {
         expect(response.text).toMatch(/<div class="alert alert-danger">/);
       });
