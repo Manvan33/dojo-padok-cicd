@@ -4,13 +4,14 @@ variables:
 stages:
   - lint
   - test
+  - test-e2e
 
 default:
   image: 766369807176.dkr.ecr.us-east-1.amazonaws.com/node:10-alpine
   tags:
     - kubernetes 
     - rezel
-    
+
 lint-job:
   stage: lint
   script:
@@ -22,3 +23,9 @@ test-job:
   script:
     - npm install
     - npm run test
+
+e2e-test-job:
+  stage: test-e2e
+  script:
+    - npm install
+    - npm run test:e2e
