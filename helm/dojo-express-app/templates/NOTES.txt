@@ -1,0 +1,1 @@
+Visit your application at http://{{ .Values.myName }}.dojo-rezel.aws.padok.cloud :D
