@@ -3,7 +3,7 @@ const favicon = require('serve-favicon');
 const path = require('path');
 const app = express();
 
-const importantVar = "important var with important value";
+//const importantVar = "important var with important value";
 
 const base_path = process.env.BASE_PATH || '/app'
 
