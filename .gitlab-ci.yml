@@ -7,15 +7,15 @@ stages:
 
 default:
   image: 766369807176.dkr.ecr.us-east-1.amazonaws.com/node:10-alpine
-  
+  tags:
+    - kubernetes 
+    - rezel
+    
 lint-job:
   stage: lint
   script:
     - npm install
     - npm run lint
-  tags:
-    - kubernetes 
-    - rezel
 
 test-job:
   stage: test
