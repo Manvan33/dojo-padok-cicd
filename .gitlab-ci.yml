@@ -38,6 +38,7 @@ e2e-test-job:
     - npm run test:e2e
 
 build-and-release-job:
+  stage: build-and-release
   image: docker:20.10.16
   before_script:
     - apk add aws-cli
