@@ -38,8 +38,7 @@ describe('flickr public feed api', () => {
             'published',
             'author',
             'author_id',
-            'tags',
-            'sorry_not_sorry'
+            'tags'
           ])
         );
       });
