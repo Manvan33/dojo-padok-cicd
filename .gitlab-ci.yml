@@ -1,0 +1,14 @@
+variables:
+  MY_NAME: ivan-ivan # Change it accordingly, please respect the formatting !
+
+default:
+  image: 766369807176.dkr.ecr.us-east-1.amazonaws.com/node:10-alpine
+
+lint-job:
+  stage: lint
+  script:
+    - npm install
+    - npm lint
+  tags:
+    - kubernetes 
+    - rezel
