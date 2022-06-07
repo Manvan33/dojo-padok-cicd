@@ -45,10 +45,9 @@ build-and-release-job:
   before_script:
     - apk add aws-cli
   script:
-    - docker build -t dojo-express-app:${MY_NAME}.${APP_VERSION}
+    - docker build . -t dojo-express-app:${MY_NAME}.${APP_VERSION}
     - docker tag dojo-express-app:${MY_NAME}.${APP_VERSION} 766369807176.dkr.ecr.us-east-1.amazonaws.com/dojo-express-app:${MY_NAME}.${APP_VERSION}
     - aws ecr get-login-password | docker login --username AWS --password-stdin 766369807176.dkr.ecr.us-east-1.amazonaws.com
     - docker push 766369807176.dkr.ecr.us-east-1.amazonaws.com/dojo-express-app:${MY_NAME}.${APP_VERSION}
   services:
     - docker:20.10.16-dind
-    
